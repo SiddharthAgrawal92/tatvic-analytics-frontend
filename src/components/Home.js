@@ -10,7 +10,7 @@ const Home = () => {
 
     const handleOnSearch = async (inputString, results) => {
         if (inputString && inputString.length && inputString.length) {
-            const res = await axios.get(`https://en.wikipedia.org/w/api.php?action=opensearch&format=json&formatversion=2&search=${inputString}&namespace=0&limit=5`);
+            const res = await axios.get(`https://thingproxy.freeboard.io/fetch/https://en.wikipedia.org/w/api.php?action=opensearch&format=json&formatversion=2&search=${inputString}&namespace=0&limit=5`);
             if (res.status === 200 && res.data && res.data.length && res.data[1]) {
                 if (res.data[1].length) {
                     setItems(res.data[1].map((value, index) => {

@@ -21,9 +21,6 @@ const Login = () => {
 
     const onSuccess = (res) => {
         setProfile(res.profileObj);
-        setTimeout(() => {
-            window.location.reload(true);
-        }, 500);
     };
 
     const onFailure = (err) => {

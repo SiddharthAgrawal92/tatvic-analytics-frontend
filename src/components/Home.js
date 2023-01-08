@@ -10,7 +10,7 @@ const Home = () => {
 
     const handleOnSearch = async (inputString, results) => {
         if (inputString && inputString.length && inputString.length) {
-            const res = await axios.get(`https://en.wikipedia.org/w/api.php?action=opensearch&format=json&formatversion=2&search=${inputString}&namespace=0&limit=5`, {
+            const res = await axios.get(`https://en.wikipedia.org/w/api.php?action=opensearch&format=json&formatversion=2&search=${inputString}&namespace=0&limit=5&origin=*`, {
                 headers: {
                     "Origin": "https://tatvic-analytics-frontend.onrender.com/",
                     "Content-Type": "application/json"
